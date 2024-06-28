@@ -1,0 +1,685 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins;
+  background-color: black;
+  color: #fff;
+  margin: 0;
+  font-size: 12px;
+  height: 100vh;
+}
+
+header {
+  padding-top: 15px;
+  width: 1140px;
+  max-width: 90%;
+  margin: auto;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 100;
+  text-shadow: 0 0.5px 1px rgb(157, 156, 156);
+}
+
+.logo {
+  letter-spacing: 8px;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #eee;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  color: rgb(226, 251, 117);
+}
+
+.carousel {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin-top: -50px;
+  position: relative;
+}
+
+.carousel .list .item {
+  position: absolute;
+  inset: 0 0 0 0;
+}
+
+.carousel .list .item img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: relative;
+  filter: brightness(45%);
+}
+
+.carousel .list .item .content {
+  position: absolute;
+  width: 900px;
+  max-width: 80%;
+  top: 22.5%;
+  left: 40.5%;
+  transform: translate(-50%);
+  padding-right: 30%;
+  box-sizing: border-box;
+  color: #fff;
+  /* text-shadow: 0 1px 3px rgb(157, 156, 156); */
+}
+
+.carousel .list .item .content .author {
+  font-weight: bold;
+  letter-spacing: 7px;
+  font-size: 2.2rem;
+}
+
+.carousel .list .item .content .title {
+  font-weight: 200;
+  font-size: 1rem;
+  list-style: 1.3em;
+  letter-spacing: 3px;
+}
+
+.carousel .list .item .content .topic {
+  font-weight: bold;
+  list-style: 1.3em;
+  letter-spacing: 5px;
+  color: rgb(226, 251, 117);
+  font-size: 3.2rem;
+}
+
+.carousel .list .item .content .description {
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+}
+
+.carousel .list .item .content .buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 180px);
+  grid-template-rows: 40px;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.carousel .list .item .content button {
+  background: rgb(226, 251, 117);
+  border: 1px solid #fff;
+  letter-spacing: 1px;
+  font-family: Poppins;
+  font-weight: 600;
+  color: #000;
+  font-size: 1.2rem;
+  padding: 5px;
+  border-radius: 10px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.carousel .list .item .content button:hover {
+  background: rgb(171, 215, 11);
+}
+
+.carousel .list .item .content button:nth-child(2) {
+  border: 1px solid white;
+  background: transparent;
+  color: rgb(226, 251, 117);
+}
+
+.carousel .list .item .content button:nth-child(2):hover {
+  color: rgb(171, 215, 11);
+  background-color: rgba(85, 85, 85, 0.36);
+}
+
+.thumbnail {
+  position: absolute;
+  left: 46.5%;
+  bottom: 50px;
+  width: max-content;
+  z-index: 100;
+  display: flex;
+  gap: 20px;
+}
+
+.thumbnail .item {
+  width: 150px;
+  height: 220px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.thumbnail .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  filter: brightness(35%);
+}
+
+.thumbnail .item .content {
+  position: absolute;
+  bottom: 10px;
+  right: 70px;
+  left: 15px;
+  width: 90%;
+}
+.thumbnail .item .content .title {
+  color: rgba(239, 251, 211, 0.469);
+  letter-spacing: 1.5px;
+  background-color: rgba(0, 0, 0, 0.298);
+}
+
+.arrows {
+  position: absolute;
+  top: 80%;
+  right: 52%;
+  width: 300px;
+  max-width: 30%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.arrows button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #eee4;
+  border: none;
+  font-weight: bold;
+  font-family: monospace;
+  color: #fff;
+  font-size: large;
+  transition: 0.5s;
+  z-index: 100;
+}
+
+.arrows button:hover {
+  cursor: pointer;
+  background-color: #eee;
+  color: #555;
+}
+
+.carousel .list .item:nth-child(1) {
+  z-index: 1;
+}
+
+.carousel .list .item:nth-child(1) .author,
+.carousel .list .item:nth-child(1) .title,
+.carousel .list .item:nth-child(1) .topic,
+.carousel .list .item:nth-child(1) .description,
+.carousel .list .item:nth-child(1) .buttons {
+  transform: translateY(50px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent 0.5s 0.5s linear 1 forwards;
+}
+
+@keyframes showContent {
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+.carousel .list .item:nth-child(1) .title {
+  animation-delay: 0.8s;
+}
+
+.carousel .list .item:nth-child(1) .topic {
+  animation-delay: 1s;
+}
+
+.carousel .list .item:nth-child(1) .description {
+  animation-delay: 1.2s;
+}
+
+.carousel .list .item:nth-child(1) .buttons {
+  animation-delay: 1.4s;
+}
+
+.carousel.next .list .item:nth-child(1) img {
+  width: 150px;
+  height: 220px;
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  border-radius: 20px;
+  animation: showImage 0.5s linear 1 forwards;
+}
+
+@keyframes showImage {
+  to {
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    bottom: 0;
+    border-radius: 0;
+  }
+}
+
+.carousel .thumbnail .item:nth-child(1) img {
+  filter: brightness(100%);
+  box-shadow: 0px 0px 8px rgb(226, 251, 117, 0.5);
+}
+
+.carousel .thumbnail .item:nth-child(1) .content .title {
+  /* color: rgb(239, 251, 211); */
+  color: rgb(201, 240, 43);
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1) {
+  width: 0;
+  overflow: hidden;
+  animation: showThumbnail 0.5s linear 1 forwards;
+}
+
+@keyframes showThumbnail {
+  to {
+    width: 150px;
+  }
+}
+
+.carousel.next .thumbnail {
+  transform: translateX(150px);
+  animation: transformThumbnail 0.5s linear 1 forwards;
+}
+
+@keyframes transformThumbnail {
+  to {
+    transform: translateX(0);
+  }
+}
+
+.carousel.prev .list .item:nth-child(1) {
+  z-index: 2;
+}
+
+.carousel.prev .list .item:nth-child(1) img {
+  width: 150px;
+  height: 220px;
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  border-radius: 20px;
+  animation: showImage 1s linear 1 forwards;
+}
+
+@keyframes showImage {
+  to {
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    bottom: 0;
+    border-radius: 0;
+  }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1) {
+  width: 0px;
+  overflow: hidden;
+  animation: showPrevThumbnail 0.5s linear 1 forwards;
+  border-radius: 20px;
+  box-shadow: 0px 0px 8px rgb(226, 251, 117, 0.5);
+}
+
+@keyframes showPrevThumbnail {
+  to {
+    width: 150px;
+  }
+}
+
+.carousel.prev .list .item:nth-child(2) .author,
+.carousel.prev .list .item:nth-child(2) .title,
+.carousel.prev .list .item:nth-child(2) .topic,
+.carousel.prev .list .item:nth-child(2) .description,
+.carousel.prev .list .item:nth-child(2) .buttons {
+  animation: contentOut 0.5s linear 1 forwards;
+}
+
+@keyframes contentOut {
+  to {
+    transform: translate(-150px);
+    filter: blur(20px);
+    opacity: 0;
+  }
+}
+
+.carousel.next .arrows button,
+.carousel.prev .arrows button {
+  pointer-events: none;
+}
+
+.time {
+  width: 100%;
+  height: 5px;
+  background-color: rgb(226, 251, 117);
+  position: absolute;
+  z-index: 200;
+  top: 0;
+  left: 0;
+}
+
+.carousel.next .time,
+.carousel.prev .time {
+  width: 100%;
+  animation: timeRunning 2s linear 1 forwards;
+}
+
+@keyframes timeRunning {
+  to {
+    width: 0;
+  }
+}
+
+/* Media Queries */
+@media (min-width: 981px) and (max-width: 1200px) {
+  body {
+    height: 100vh;
+    width: 100vw;
+  }
+  header {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .carousel .list .item .content {
+    width: 100%;
+    top: 20%;
+    left: 50%;
+  }
+  .carousel .list .item .content .topic {
+    font-size: 3rem;
+  }
+  .carousel .list .item .content .author {
+    font-size: 1.5rem;
+  }
+  .carousel .list .item .content .buttons {
+    grid-template-columns: repeat(2, 170px);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 980px) {
+  body {
+    height: 100vh;
+    width: 100vw;
+  }
+  header {
+    font-size: 0.9rem;
+  }
+  .carousel .list .item .content {
+    width: 100%;
+    top: 25%;
+    left: 50%;
+  }
+  .carousel .list .item .content .topic {
+    font-size: 2.5rem;
+  }
+  .carousel .list .item .content .author {
+    font-size: 1.2rem;
+  }
+  .carousel .list .item .content .buttons {
+    grid-template-columns: repeat(2, 150px);
+  }
+  .arrows {
+    top: 70%;
+    width: 300px;
+  }
+  .arrows button {
+    width: 60px;
+    height: 60px;
+  }
+  .thumbnail .item {
+    width: 150px;
+    height: 260px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  body {
+    height: 100vh;
+    width: 100vw;
+  }
+  .carousel .list .item .content {
+    width: 100%;
+    top: 15%;
+    left: 50%;
+  }
+  .carousel .list .item .content .topic {
+    font-size: 2rem;
+  }
+  .carousel .list .item .content .author {
+    font-size: 1rem;
+  }
+  .carousel .list .item .content .buttons {
+    grid-template-columns: repeat(2, 160px);
+  }
+  .arrows {
+    top: 60%;
+    width: 100px;
+  }
+  .thumbnail .item {
+    width: 150px;
+    height: 260px;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 576px) {
+  body {
+    height: 100vh;
+    width: 100vw;
+  }
+  header {
+    height: 40px;
+  }
+
+  header nav {
+    gap: 9px;
+  }
+
+  header nav a {
+    font-size: 0.8rem;
+  }
+
+  .carousel .list .item .content {
+    width: 100%;
+    top: 15%;
+    left: 50%;
+  }
+
+  .carousel .list .item .content .topic {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .carousel .list .item .content .title {
+    font-size: 0.5rem;
+    margin-bottom: 10px;
+  }
+
+  .carousel .list .item .content .author {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  .carousel .list .item .content .buttons {
+    grid-template-columns: repeat(2, 140px);
+  }
+
+  .carousel .list .item .content .description {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+
+  .carousel .list .item .content .buttons button {
+    font-size: 1rem;
+  }
+
+  .arrows {
+    top: 75%;
+    width: 120px;
+    left: 10%;
+  }
+  .arrows button {
+    width: 50px;
+    height: 50px;
+  }
+  .thumbnail .item {
+    width: 120px;
+    height: 210px;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    height: 100vh;
+    width: 100vw;
+  }
+  header {
+    width: 100%;
+    height: 40px;
+  }
+
+  header nav {
+    gap: 4px;
+  }
+
+  header nav a {
+    font-size: 0.8rem;
+  }
+
+  .carousel .list .item .content {
+    width: 100%;
+    top: 15%;
+    left: 50%;
+  }
+
+  .carousel .list .item .content .topic {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+
+  .carousel .list .item .content .title {
+    font-size: 0.5rem;
+    margin-bottom: 5px;
+  }
+
+  .carousel .list .item .content .author {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+
+  .carousel .list .item .content .description {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+  }
+
+  .carousel .list .item .content .buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+  }
+
+  .carousel .list .item .content .buttons button {
+    font-size: 0.8rem;
+  }
+
+  .arrows {
+    top: 80%;
+    left: 7%;
+    width: 200px;
+  }
+  .arrows button {
+    width: 50px;
+    height: 50px;
+  }
+  .thumbnail .item {
+    width: 90px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    height: 100vh;
+    width: 100vw;
+  }
+  header {
+    width: 100%;
+    height: 40px;
+  }
+
+  header nav {
+    gap: 4px;
+  }
+
+  header nav a {
+    font-size: 0.8rem;
+  }
+
+  .carousel .list .item .content {
+    width: 100%;
+    top: 15%;
+    left: 50%;
+  }
+
+  .carousel .list .item .content .topic {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+
+  .carousel .list .item .content .title {
+    font-size: 0.5rem;
+    margin-bottom: 5px;
+  }
+
+  .carousel .list .item .content .author {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+
+  .carousel .list .item .content .description {
+    font-size: 0.5rem;
+    margin-bottom: 5px;
+  }
+
+  .carousel .list .item .content .buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+  }
+
+  .carousel .list .item .content .buttons button {
+    font-size: 0.7rem;
+  }
+
+  .arrows {
+    top: 80%;
+    left: 7%;
+    width: 150px;
+  }
+  .arrows button {
+    width: 40px;
+    height: 40px;
+  }
+  .thumbnail .item {
+    width: 80px;
+    height: 120px;
+  }
+}
